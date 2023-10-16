@@ -28,7 +28,8 @@ Serving the HTML pages.
 Testing the webserver
 
 ## PROGRAM:
-```from http.server import HTTPServer,BaseHTTPRequestHandler
+```py
+from http.server import HTTPServer,BaseHTTPRequestHandler
 
 content='''
 <!doctype html>
@@ -54,12 +55,18 @@ class MyServer(BaseHTTPRequestHandler):
         self.wfile.write(content.encode())
 
 print("This is my webserver") 
-server_address =('',80)
+server_address =('',8000)
 httpd = HTTPServer(server_address,MyServer)
 httpd.serve_forever()
-## OUTPUT:
 ```
-![Screenshot (5)](https://github.com/RESHMA22C/webserver/assets/147474426/261b50ab-0d4d-4deb-8561-4f8ff665fa0a)
+## OUTPUT:
+### Server output
+![serveroutput](https://github.com/RESHMA22C/webserver/assets/147474426/0a25a967-9521-4ee8-905e-6ed878380fe5)
+### Client output
+![clientoutput](https://github.com/RESHMA22C/webserver/assets/147474426/9482848e-0dd3-4792-9716-f1579e18aa09)
 
-## RESULT:
-The program is executed succesfully
+## RESULT
+The program is executed successfully
+
+
+
